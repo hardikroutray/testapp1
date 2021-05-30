@@ -71,6 +71,8 @@ st.markdown("""
 import zipfile
 import tempfile
 
+
+'''
 stream = st.file_uploader('TF.Keras model file (.h5py.zip)', type='zip')
 if stream is not None:
   myzipfile = zipfile.ZipFile(stream)
@@ -80,10 +82,10 @@ if stream is not None:
     model_dir = os.path.join(tmp_dir, root_folder)
     #st.info(f'trying to load model from tmp dir {model_dir}...')
     model = tf.keras.models.load_model(model_dir)
-
+'''
 
 #os.system("wget https://github.com/hardikroutray/testapp/blob/master/bestCNN2D.h5")
-#model = load_model("./bestCNN2D.h5") 
+model = load_model("https://github.com/hardikroutray/testapp/blob/master/bestCNN2D.h5") 
 
 def model_prediction(img):
   #img = image.load_img(img_path, grayscale=True, target_size=(150,150)) #target_size=(28,28), grayscale=True
