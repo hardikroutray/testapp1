@@ -57,6 +57,7 @@ import base64
 from PIL import Image, ImageOps
 import requests
 from io import BytesIO
+import os
 
 st.markdown("""
 <style>
@@ -66,6 +67,8 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+#model = load_model("./bestCNN2D.h5")
+os.system("wget https://github.com/hardikroutray/testapp/blob/master/bestCNN2D.h5")
 model = load_model("./bestCNN2D.h5") 
 
 
