@@ -81,8 +81,9 @@ if stream is not None:
     root_folder = myzipfile.namelist()[0] # e.g. "model.h5py"
     model_dir = os.path.join(tmp_dir, root_folder)
     #st.info(f'trying to load model from tmp dir {model_dir}...')
-    model = tf.keras.models.load_model(model_dir)
-
+    #model = tf.keras.models.load_model(model_dir)
+    model = load_model(model_dir)
+    
 
 #os.system("wget https://github.com/hardikroutray/testapp/blob/master/bestCNN2D.h5")
 #model = load_model("https://github.com/hardikroutray/testapp/blob/master/bestCNN2D.h5") 
